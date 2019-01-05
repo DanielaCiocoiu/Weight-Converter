@@ -10,18 +10,19 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" type="text/css" href="style.css" />
-
     <title>Weight Converter</title>
   </head>
   <body>
-    <div class="container">
+    <h1 class="display-4 text-center">Weight and Metric Converter</h1>
+    <!-- afisez titlul pe centru -->
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+        <!-- <div class="col-md-6 offset-md-3"></div> --><!-- offset-md-3 == fixeaza coloanele pe mijloc -->
+        <div class="col-lg-3 offset-md-3">
           <form>
             <div class="form-grup">
+              <!-- form-grup - este o clasa bootstrap -->
               <input
                 id="kgInput"
                 type="number"
@@ -31,21 +32,20 @@
             </div>
           </form>
           <div id="output">
-            <div class="bg bg-primary mb-2">
+            <div class="card bg-primary mb-3">
               <div class="card-body">
                 <h4>Grams:</h4>
                 <div id="gramsOutput"></div>
               </div>
             </div>
-
-            <div class="bg bg-success mb-2">
+            <div class="card bg-info mb-3">
+              <!-- mb-3 aduc spatii intre randuri -->
               <div class="card-body">
                 <h4>Pounds:</h4>
                 <div id="lbOutput"></div>
               </div>
             </div>
-
-            <div class="bg bg-danger mb-2">
+            <div class="card bg-primary mb-3">
               <div class="card-body">
                 <h4>Ounces:</h4>
                 <div id="ozOutput"></div>
@@ -53,9 +53,41 @@
             </div>
           </div>
         </div>
+        <!-- -----------container drept-------- -->
+        <div class="col-lg-3">
+          <form>
+            <div class="form-grup">
+              <input
+                id="kmInput"
+                type="number"
+                class="form-control form-control-lg"
+                placeholder="Enter km...."
+              />
+            </div>
+          </form>
+          <div id="output1">
+            <div class="card bg-info mb-3">
+              <div class="card-body">
+                <h4>Miles:</h4>
+                <div id="milesOutput"></div>
+              </div>
+            </div>
+            <div class="card bg-primary mb-3">
+              <div class="card-body">
+                <h4>Meters:</h4>
+                <div id="mOutput"></div>
+              </div>
+            </div>
+            <div class="card bg-info mb-3">
+              <div class="card-body">
+                <h4>Feet:</h4>
+                <div id="ftOutput"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
